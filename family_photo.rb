@@ -15,11 +15,8 @@ class FamilyPhotoArranger
 
   def filter_permutations
     self.possible_arrangements.reject! do |permutation|
-      if the_left_end_of_the_row_does_not_have_the_1_year_old?(permutation)
-        true #reject 
-      elsif the_difference_in_ages_of_every_two_family_members_exceeds_2?(permutation)
-        true #reject
-      end
+      the_left_end_of_the_row_does_not_have_the_1_year_old?(permutation) || 
+      the_difference_in_ages_of_every_two_family_members_exceeds_2?(permutation)
     end
   end
 
