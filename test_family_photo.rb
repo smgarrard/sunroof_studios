@@ -20,7 +20,7 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
 
     n_persons = 3
     family_arrangement = FamilyPhotoArranger.new(n_persons)
-    p family_arrangement.possible_arrangements.count
+    family_arrangement.possible_arrangements.count
 
     assert_equal( arry, family_arrangement.possible_arrangements)
   end
@@ -34,7 +34,7 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
 
     n_persons = 4
     family_arrangement = FamilyPhotoArranger.new(n_persons)
-    p family_arrangement.possible_arrangements.count
+    family_arrangement.possible_arrangements.count
 
     assert_equal( arry, family_arrangement.possible_arrangements)
   end
@@ -50,7 +50,7 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
 
     n_persons = 5
     family_arrangement = FamilyPhotoArranger.new(n_persons)
-    p family_arrangement.possible_arrangements.count
+    family_arrangement.possible_arrangements.count
 
     assert_equal( arry, family_arrangement.possible_arrangements)
   end
@@ -58,13 +58,13 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
   def test_when_n_equals_6    
     n_persons = 6
     family_arrangement = FamilyPhotoArranger.new(n_persons)
-    p family_arrangement.possible_arrangements.count
+    family_arrangement.possible_arrangements.count
   end
 
   def test_when_n_equals_7
     n_persons = 7
     family_arrangement = FamilyPhotoArranger.new(n_persons)
-    p family_arrangement.possible_arrangements.count
+    family_arrangement.possible_arrangements.count
   end
 
 
