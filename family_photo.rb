@@ -10,14 +10,14 @@ class FamilyPhotoArranger
   end
 
   def generate_all_possible_permutations
-    self.possible_arrangements = (1..@n_persons).to_a.permutation.to_a
+    self.possible_arrangements = (1..@n_persons).to_a.permutation.to_a #this needs drastic improvement
   end
 
   def filter_permutations
     self.possible_arrangements.reject! do |permutation|
       if check_left_end_of_the_row_has_the_1_year_old permutation
         true #reject 
-      elsif check_differences_in_ages_of_every_two_family_members_does_not_exceed_2 permutation
+      elsif check_difference_in_ages_of_every_two_family_members_does_not_exceed_2 permutation
         true #reject
       end
     end
@@ -27,9 +27,9 @@ class FamilyPhotoArranger
     permutation.first != 1
   end
 
-  def check_differences_in_ages_of_every_two_family_members_does_not_exceed_2 permutation
+  def check_difference_in_ages_of_every_two_family_members_does_not_exceed_2 permutation
     permutation.each_cons(2) do |consecutive| 
-      return true if (consecutive.first - consecutive.last).abs > 2
+      return true if (consecutive.first - consecutive.last).abs > 2 #reject
     end
     false
   end
