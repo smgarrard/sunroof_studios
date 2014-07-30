@@ -1,4 +1,3 @@
-
 require_relative "family_photo"
 require "test/unit"
 system("clear") # for easier to read console output
@@ -17,7 +16,6 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
     a = [1,2,3] 
     b = [1,3,2] 
     arry = [a,b]
-
     n_persons = 3
     family_arrangement = FamilyPhotoArranger.new(n_persons)
     family_arrangement.possible_arrangements.count
@@ -31,7 +29,6 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
     c = [1,3,2,4] 
     d = [1,3,4,2]
     arry = [a,b,c,d]
-
     n_persons = 4
     family_arrangement = FamilyPhotoArranger.new(n_persons)
     family_arrangement.possible_arrangements.count
@@ -47,7 +44,6 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
     e = [1,3,2,4,5]
     f = [1,3,5,4,2]
     arry = [a,b,c,d,e,f]
-
     n_persons = 5
     family_arrangement = FamilyPhotoArranger.new(n_persons)
     family_arrangement.possible_arrangements.count
@@ -55,7 +51,7 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
     assert_equal( arry, family_arrangement.possible_arrangements)
   end
 
-  def test_when_n_equals_6    
+  def test_when_n_equals_6
     n_persons = 6
     family_arrangement = FamilyPhotoArranger.new(n_persons)
     family_arrangement.possible_arrangements.count
@@ -66,6 +62,5 @@ class TestFamilyPhotoArranger < Test::Unit::TestCase
     family_arrangement = FamilyPhotoArranger.new(n_persons)
     family_arrangement.possible_arrangements.count
   end
-
 
 end
